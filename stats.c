@@ -12,8 +12,8 @@ struct Stats compute_statistics(const float* numberset, int setlength)
 	
 	calculate_min_max(numberset, setlength, minimum, maximum);
 	
-    s.min = *minimum;
-    s.max = *maximum;
+    s.min = minimum[1] ;
+    s.max = maximum[1] ;
     
     return s;
 };
