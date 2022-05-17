@@ -2,13 +2,15 @@
 
 struct Stats compute_statistics(const float* numberset, int setlength)
 {
-    	float result, minimum, max;
+    	float result;
+	float minimum[1] = {0};
+	float maximum[1] = {0};
 	
 	
     struct Stats s;
     s.average = calculate_average(numberset, setlength, result);
 	
-	calculate_min_max(numberset, setlength, &minimum, &maximum);
+	calculate_min_max(numberset, setlength, minimum, maximum);
 	
     s.min = *minimum;
     s.max = *maximum;
@@ -32,16 +34,19 @@ return (result/setlength);
 void calculate_min_max(const float* numberset, int setlength, float *minimum, float *maximum)
 {
     int i;
-	*minimum = *maximum = numberset[0];
+	minimum[1] = numberset[0];
+	maximum[1] = numberset[0];
+	
+	
 	for(i=1; i<=setlength; i++)
 	{
-		if(*minimum > numberset[i] )
+		if(minimum[1]  > numberset[i] )
 		{
-			*minimum = numberset[i];
+			minimum[1]  = numberset[i];
 		}
-		else if(*maximum < numberset[i] )
+		else if(maximum[1] < numberset[i] )
 		{
-			*maximum = numberset[i];
+			maximum[1] = numberset[i];
 		}
 	}
    
