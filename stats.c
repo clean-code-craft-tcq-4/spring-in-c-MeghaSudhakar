@@ -38,7 +38,7 @@ void calculate_min_max(const float* numberset, int setlength, float *minimum, fl
 	maximum[0] = numberset[0];
 	
 	
-	for(i=1; i<=setlength; i++)
+	for(i=1; i<setlength; i++)
 	{
 		if(minimum[0]  > numberset[i] )
 		{
