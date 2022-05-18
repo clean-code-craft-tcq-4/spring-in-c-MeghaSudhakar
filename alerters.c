@@ -1,9 +1,9 @@
 #include "alerters.h"
 
-int emailAlertCallCount()
+int emailAlerter()
 {
 }
 
-int ledAlertCallCount()
+int ledAlerter()
 {
 }
