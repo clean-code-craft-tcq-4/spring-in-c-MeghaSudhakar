@@ -31,7 +31,7 @@ TEST_CASE("reports average, minimum and maximum")
     //Use https://stackoverflow.com/questions/1923837/how-to-use-nan-and-inf-in-c
 }*/
 
-/*TEST_CASE("raises alerts when max is greater than threshold") {
+TEST_CASE("raises alerts when max is greater than threshold") {
     // create additional .c and .h files
     // containing the emailAlerter, ledAlerter functions
     alerter_funcptr alerters[] = {emailAlerter, ledAlerter};
@@ -48,4 +48,4 @@ TEST_CASE("reports average, minimum and maximum")
     REQUIRE(emailAlertCallCount == 1);
     REQUIRE(ledAlertCallCount == 1);
 }
-*/
+
