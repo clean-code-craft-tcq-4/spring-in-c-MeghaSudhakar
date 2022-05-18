@@ -65,13 +65,7 @@ void calculate_min_max(const float* numberset, int setlength, float *minimum, fl
 
 
 
-int emailAlertCallCount()
-{
-}
 
-int ledAlertCallCount()
-{
-}
 
 
 
