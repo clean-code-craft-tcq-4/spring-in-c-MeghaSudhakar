@@ -17,15 +17,15 @@ struct Stats compute_statistics(const float* numberset, int setlength)
 		return s;
 	}*/
 	
-	else
-	{
+	//else
+	//{
 		s.average = calculate_average(numberset, setlength, result);
 		calculate_min_max(numberset, setlength, minimum, maximum);
 		s.min = minimum[0] ;
     		s.max = maximum[0] ;
 		
 		return s;		
-	}' 
+	//}' 
 }
 
 float calculate_average(const float* numberset, int setlength, float result)
