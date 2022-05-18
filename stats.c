@@ -8,14 +8,14 @@ struct Stats compute_statistics(const float* numberset, int setlength)
 	
         struct Stats s;
 	
-	if(setlength == 0)
+	/*if(setlength == 0)
 	{
 		s.average = NAN;
 		s.min = NAN;
 		s.max = NAN;
 		
 		return s;
-	}
+	}*/
 	
 	else
 	{
