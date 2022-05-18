@@ -1,2 +1,8 @@
-#include <alerters.h>
+#include "alerters.h"
 
+
+int emailAlertCallCount()
+{
+  
+  
+}
