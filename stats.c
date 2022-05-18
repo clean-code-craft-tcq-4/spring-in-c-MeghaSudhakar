@@ -3,7 +3,8 @@
 struct Stats compute_statistics(const float* numberset, int setlength)
 {
     	float result;
-	float minimum, maximum;
+	float minimum[1] = {0};
+	float maximum[1] = {0};
 	
         struct Stats s;
 	
@@ -19,9 +20,9 @@ struct Stats compute_statistics(const float* numberset, int setlength)
 	//else
 	//{
 		s.average = calculate_average(numberset, setlength, result);
-		calculate_min_max(numberset, setlength, &minimum, &maximum);
-		s.min = *minimum ;
-    		s.max = *maximum ;
+		calculate_min_max(numberset, setlength, minimum, maximum);
+		s.min = minimum[0] ;
+    		s.max = maximum[0] ;
 		
 		return s;		
 	//}' 
@@ -43,22 +44,19 @@ return (result/setlength);
 void calculate_min_max(const float* numberset, int setlength, float *minimum, float *maximum)
 {
     int i;
-	*minimum = numberset[0];
-	*maximum = numberset[0];
+	minimum[0] = numberset[0];
+	maximum[0] = numberset[0];
 	
 	
 	for(i=1; i<setlength; i++)
 	{
-		if(*minimum  > numberset[i] )
+		if(minimum[0]  > numberset[i] )
 		{
-			*minimum  = numberset[i];
+			minimum[0]  = numberset[i];
 		}
-		else if(*maximum < numberset[i] )
+		else if(maximum[0] < numberset[i] )
 		{
-			*maximum = numberset[i];
-		}
-		else
-		{
+			maximum[0] = numberset[i];
 		}
 	}
    
@@ -77,6 +75,7 @@ int ledAlertCallCount()
 
 
 
+    
     
 
 
