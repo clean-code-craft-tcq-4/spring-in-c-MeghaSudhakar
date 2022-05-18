@@ -26,7 +26,7 @@ struct Stats compute_statistics(const float* numberset, int setlength)
 		
 		return s;		
 	}' 
-};
+}
 
 float calculate_average(const float* numberset, int setlength, float result)
 {
