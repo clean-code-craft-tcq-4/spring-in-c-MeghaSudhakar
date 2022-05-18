@@ -6,16 +6,26 @@ struct Stats compute_statistics(const float* numberset, int setlength)
 	float minimum[1] = {0};
 	float maximum[1] = {0};
 	
+        struct Stats s;
 	
-    struct Stats s;
-    s.average = calculate_average(numberset, setlength, result);
+	if(setlength == 0)
+	{
+		s.average = NAN;
+		s.min = NAN;
+		s.max = NAN;
+		
+		return s;
+	}
 	
-	calculate_min_max(numberset, setlength, minimum, maximum);
-	
-    s.min = minimum[0] ;
-    s.max = maximum[0] ;
-    
-    return s;
+	else
+	{
+		s.average = calculate_average(numberset, setlength, result);
+		calculate_min_max(numberset, setlength, minimum, maximum);
+		s.min = minimum[0] ;
+    		s.max = maximum[0] ;
+		
+		return s;		
+	}' 
 };
 
 float calculate_average(const float* numberset, int setlength, float result)
