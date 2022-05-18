@@ -74,8 +74,13 @@ void check_and_alert(float maxThreshold, alerter_funcptr alerters[], struct Stat
 }
 
 
+int emailAlertCallCount()
+{
+}
 
-
+int ledAlertCallCount()
+{
+}
 
 
 
