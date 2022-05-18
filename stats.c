@@ -62,6 +62,17 @@ void calculate_min_max(const float* numberset, int setlength, float *minimum, fl
    
 }
 
+void check_and_alert(float maxThreshold, alerter_funcptr alerters[], struct Stats computedStats)
+{
+	if (computedStats.max > maxThreshold)
+	{
+		
+	}
+	else
+	{
+	}
+}
+
 
 
 
