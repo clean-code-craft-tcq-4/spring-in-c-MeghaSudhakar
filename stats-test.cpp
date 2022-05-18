@@ -47,4 +47,5 @@ TEST_CASE("reports average, minimum and maximum")
     // you can define call-counters along with the functions, as shown below
     REQUIRE(emailAlertCallCount == 1);
     REQUIRE(ledAlertCallCount == 1);
-}*/
+}
+*/
