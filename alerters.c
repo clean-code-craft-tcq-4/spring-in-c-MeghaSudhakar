@@ -4,8 +4,10 @@
 int emailAlertCallCount,  ledAlertCallCount;
 void emailAlerter()
 {
+  emailAlertCallCount++;
 }
 
 void ledAlerter()
 {
+  ledAlertCallCount++;
 }
