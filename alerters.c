@@ -1,7 +1,7 @@
 #include "alerters.h"
 #include "stats.h"
 
-int emailAlertCallCount,  ledAlertCallCount;
+int emailAlertCallCount = ledAlertCallCount = 0;
 void emailAlerter()
 {
   emailAlertCallCount++;
